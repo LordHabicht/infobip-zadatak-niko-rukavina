@@ -18,64 +18,90 @@ body {
   /*font-size: 16px;*/
   line-height: 1.7; }
 
-table.blueTable {
+table.table--blue {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
   width: 100%;
   text-align: left;
   border-collapse: collapse; }
 
-table.blueTable td, table.blueTable th {
+table.table--blue td,
+table.table--blue th {
   border: 1px solid #AAAAAA;
   padding: 3px 2px; }
 
-table.blueTable tbody td {
+table.table--blue tbody td {
   font-size: 13px; }
 
-table.blueTable tr:nth-child(even) {
+table.table--blue tbody tr:hover {
+  background-color: rgba(145, 174, 198, 0.3);
+  cursor: pointer; }
+
+table.table--blue tr:nth-child(even) {
   background: #D0E4F5; }
 
-table.blueTable thead {
+table.table--blue thead {
   background: #91AEC6; }
 
-table.blueTable thead th {
+table.table--blue thead th {
   font-size: 15px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #ffffff;
   border-left: 2px solid #D0E4F5; }
 
-table.blueTable thead th:first-child {
+table.table--blue thead th:first-child {
   border-left: none; }
 
-table.blueTable tfoot {
+table.table--blue tfoot {
   font-size: 14px;
   font-weight: normal;
-  color: #FFFFFF; }
+  color: #ffffff; }
 
-table.blueTable tfoot td {
+table.table--blue tfoot td {
   font-size: 14px; }
 
-table.blueTable tfoot .links {
+table.table--blue tfoot .links {
   text-align: right; }
 
-table.blueTable tfoot .links a {
+table.table--blue tfoot .links a {
   display: inline-block;
   background: #B3B3B3;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 4px 16px;
   border-radius: 2px; }
 
-table.blueTable tfoot a.table__show-rows {
+table.table--blue tfoot a.table__show-rows {
   display: inline;
-  color: blue;
+  color: #1C6EA4;
   background: transparent;
-  text-decoration: underline; }
+  text-decoration: underline;
+  cursor: pointer; }
 
 .table__show-rows-wrapper {
   margin: 0 auto;
   text-align: center; }
   .table__show-rows-wrapper a.table__show-rows {
     margin-right: 1rem; }
+
+.table__filter-input {
+  width: 90%; }
+
+.table__edit-button {
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  background-color: transparent; }
+  .table__edit-button .table__edit-icon {
+    margin-right: 4px; }
+  .table__edit-button:hover {
+    border-radius: 3px;
+    background-color: #91AEC6;
+    color: #ffffff; }
+    .table__edit-button:hover i {
+      color: #ffffff; }
+
+.table__edit-cell {
+  width: 60px; }
 
 htm,
 body {
@@ -86,37 +112,40 @@ a {
 
 .pagination-wrapper {
   text-align: center;
-  margin: 40px 0; }
+  margin-top: 25px;
+  margin-bottom: -4px; }
 
 .pagination {
   display: inline-block;
-  height: 70px;
-  margin-top: 70px;
+  height: 50px;
+  margin-top: 0;
+  margin-bottom: 10px;
   padding: 0 25px;
   border-radius: 35px;
-  background-color: #eee; }
+  background-color: #DDDDDD; }
   @media only screen and (max-width: 1199px) {
     .pagination {
       height: 50px;
-      margin-top: 50px;
+      margin-top: 10px;
+      margin-bottom: 20px;
       padding: 0 10px;
       border-radius: 25px; } }
 
 .page-numbers {
   display: block;
-  padding: 0 25px;
+  padding: 7px 22px;
   float: left;
   transition: 400ms ease;
   color: #595959;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.1em;
-  line-height: 70px; }
+  line-height: 36px; }
   .page-numbers:hover, .page-numbers.current {
-    background-color: #86c023;
-    color: #fff; }
+    background-color: #91AEC6;
+    color: #ffffff; }
   .page-numbers.prev:hover, .page-numbers.next:hover {
     background-color: transparent;
-    color: #86c023; }
+    color: #91AEC6; }
   @media only screen and (max-width: 1199px) {
     .page-numbers {
       padding: 0 15px;
@@ -158,3 +187,15 @@ a {
   width: 80%;
   height: 50%;
   display: none; }
+
+.modal__button-bar {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
+
+.modal__btn {
+  padding: 8px; }
+
+.modal__save-btn {
+  background-color: blue;
+  color: white; }

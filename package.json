@@ -1,7 +1,7 @@
 {
-  "name": "natours",
+  "name": "infobip",
   "version": "1.0.0",
-  "description": "Landing page for natours",
+  "description": "Landing page for infobip",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

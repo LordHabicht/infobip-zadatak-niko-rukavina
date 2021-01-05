@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="https://use.fontawesome.com/0cd4e0ea9f.js"></script>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,29 +21,36 @@
         <div id="backdrop">
             
         </div>
-        <div id="modal"></div>
+        <div id="modal">
+            <div class="modal__button-bar">
+                <button class="modal__btn modal__save-btn" onclick="hideModal()">Save</button>
+                <button class="modal__btn modal__cancel-btn" onclick="hideModal()">Cancel</button>
+            </div>
+        </div>
         <main>
             <h1>Frontend assignment – Accounts Receivable</h1>
-            <table class="blueTable">
+            <table class="table--blue">
                 <thead>
                 <tr>
-                <th>head1<br><input type="text" class="table__filter-input"></th>
-                <th>head2</th>
-                <th>head3</th>
-                <th>head4</th>
-                <th>head5</th>
-                <th>head6</th>
-                <th>head7</th>
-                <th>head8</th>
-                <th>head9</th>
-                <th>head10</th>
-                <th>head11</th>
-                <th>head12</th>
+                <th>C. Name<br><input type="text" class="table__filter-input"></th>
+                <th>Customer<input type="text" class="table__filter-input"></th>
+                <th>Fiscal Year<input type="text" class="table__filter-input"></th>
+                <th>Doc. Number<input type="text" class="table__filter-input"></th>
+                <th>Doc. Type<input type="text" class="table__filter-input"></th>
+                <th>Doc. Status<input type="text" class="table__filter-input"></th>
+                <th>Bank Name<input type="text" class="table__filter-input"></th>
+                <th>Doc. period<input type="text" class="table__filter-input"></th>
+                <th>Amount<input type="text" class="table__filter-input"></th>
+                <th>Currency<input type="text" class="table__filter-input"></th>
+                <th>Due in<input type="text" class="table__filter-input"></th>
+                <th>Service<input type="text" class="table__filter-input"></th>
+                <th>is paid<input type="text" class="table__filter-input"></th>
+                <th></th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                <td colspan="12">
+                <td colspan="14">
                     <div class="pagination-wrapper">
                         <div class="pagination">
                           <a class="prev page-numbers" href="javascript:;">prev</a>
@@ -54,9 +61,6 @@
                           <a class="page-numbers" href="javascript:;">5</a>
                           <a class="page-numbers" href="javascript:;">6</a>
                           <a class="page-numbers" href="javascript:;">7</a>
-                          <a class="page-numbers" href="javascript:;">8</a>
-                          <a class="page-numbers" href="javascript:;">9</a>
-                          <a class="page-numbers" href="javascript:;">10</a>
                           <a class="next page-numbers" href="javascript:;">next</a>
                         </div>
                       </div>
@@ -70,7 +74,7 @@
                 </tfoot>
                 <tbody>
                 <tr>
-                    <td>cell1_1</td><td>cell2_1</td><td>cell3_1</td><td>cell4_1</td><td>cell5_1</td><td>cell6_1</td><td>cell7_1</td><td>cell8_1</td><td>cell9_1</td><td>cell10_1</td><td>cell11_1</td><td>cell12_1</td><td><button class="table__edit-button" onclick="showModal()"><i class="fas fa-edit"></i>Edit</button></td></tr>
+                    <td>cell1_1</td><td>cell2_1</td><td>cell3_1</td><td>cell4_1</td><td>cell5_1</td><td>cell6_1</td><td>cell7_1</td><td>cell8_1</td><td>cell9_1</td><td>cell10_1</td><td>cell11_1</td><td>cell12_1</td><td>cell13_1</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
                 <td>cell1_2</td><td>cell2_2</td><td>cell3_2</td><td>cell4_2</td><td>cell5_2</td><td>cell6_2</td><td>cell7_2</td><td>cell8_2</td><td>cell9_2</td><td>cell10_2</td><td>cell11_2</td><td>cell12_2</td></tr>
                 <tr>

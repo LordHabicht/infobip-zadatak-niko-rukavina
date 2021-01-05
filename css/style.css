@@ -179,8 +179,9 @@ a {
 #backdrop {
   background-color: black;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  min-height: 1000px;
   opacity: .7;
   display: none; }
 
@@ -195,12 +196,32 @@ a {
 
 .modal__button-bar {
   position: absolute;
-  bottom: 10px;
-  right: 10px; }
+  bottom: 23px;
+  right: 28px; }
 
 .modal__btn {
-  padding: 8px; }
+  padding: 8px 16px 8px 8px;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid #AAAAAA; }
 
 .modal__save-btn {
-  background-color: blue;
-  color: white; }
+  background-color: #1C6EA4;
+  color: #ffffff;
+  border: #1C6EA4;
+  margin-right: 10px; }
+  .modal__save-btn:hover {
+    background-color: #91AEC6;
+    cursor: pointer; }
+
+.modal__cancel-btn {
+  color: #888888; }
+  .modal__cancel-btn:hover {
+    background-color: #ffffff;
+    cursor: pointer; }
+
+.modal__btn-icon {
+  margin-right: .4rem; }
+
+.modal__btn-icon-cancel {
+  opacity: .75; }

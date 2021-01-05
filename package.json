@@ -1,7 +1,7 @@
 {
-  "name": "infobip",
+  "name": "frontend assignment infobip",
   "version": "1.0.0",
-  "description": "Landing page for infobip",
+  "description": "A Frontend Assignment for infobip selection process",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
@@ -13,8 +13,8 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
-  "author": "Jonas",
-  "license": "ISC",
+  "author": "Niko Rukavina",
+  "license": "none",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",

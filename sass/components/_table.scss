@@ -9,7 +9,7 @@ table.table--blue {
 table.table--blue td,
 table.table--blue th {
     border: 1px solid $gray-dark;
-    padding: 3px 4px;
+    padding: 0.1875rem 0.25rem;
 }
 
 table.table--blue tbody td {
@@ -59,7 +59,7 @@ table.table--blue tfoot .links a {
     display: inline-block;
     background: $gray-light;
     color: $white;
-    padding: 4px 16px;
+    padding: 0.25rem 1rem;
     border-radius: 2px;
 }
 
@@ -93,11 +93,11 @@ table.table--blue tfoot a.table__show-rows {
 .table__edit-button {
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 0.3125rem;
     background-color: transparent;
 
     .table__edit-icon {
-        margin-right: 4px;
+        margin-right: 0.25rem;
     }
 
     &:hover {

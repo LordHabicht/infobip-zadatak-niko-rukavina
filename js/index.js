@@ -1,3 +1,6 @@
+/**
+ * A function to display the modal window for editing details
+ */
 function showModal() {
     var backdrop = document.getElementById("backdrop");
     backdrop.style.display = "block";
@@ -9,6 +12,9 @@ function showModal() {
 
 }
 
+/**
+ * A function to hide the modal window
+ */
 function hideModal() {
     var backdrop = document.getElementById("backdrop");
     backdrop.style.display = "none";

@@ -118,6 +118,8 @@ table.table--blue tfoot a.table__show-rows {
 
 .table__select {
     color:$blue-dark;
+    width: 100%;
+    min-width: 50px;
 }
 
 

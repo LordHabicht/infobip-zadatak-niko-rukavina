@@ -119,7 +119,9 @@ table.table--blue tfoot a.table__show-rows {
   width: 3.75rem; }
 
 .table__select {
-  color: #1C6EA4; }
+  color: #1C6EA4;
+  width: 100%;
+  min-width: 50px; }
 
 .table__filter-input-text {
   max-width: 100%;

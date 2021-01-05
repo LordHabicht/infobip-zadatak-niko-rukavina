@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="https://use.fontawesome.com/0cd4e0ea9f.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  
 
         <!--<link rel="stylesheet" href="css/icon-font.css">-->
 
@@ -16,20 +18,89 @@
     </head>
 
     <body>
+        <div id="backdrop">
+            
+        </div>
+        <div id="modal"></div>
         <main>
             <h1>Frontend assignment – Accounts Receivable</h1>
-            <table class="table">
+            <table class="blueTable">
+                <thead>
                 <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
+                <th>head1<br><input type="text" class="table__filter-input"></th>
+                <th>head2</th>
+                <th>head3</th>
+                <th>head4</th>
+                <th>head5</th>
+                <th>head6</th>
+                <th>head7</th>
+                <th>head8</th>
+                <th>head9</th>
+                <th>head10</th>
+                <th>head11</th>
+                <th>head12</th>
                 </tr>
+                </thead>
+                <tfoot>
                 <tr>
-                    <td>test<td>
-                    <td>test</td>
-                    <td>test</td>
+                <td colspan="12">
+                    <div class="pagination-wrapper">
+                        <div class="pagination">
+                          <a class="prev page-numbers" href="javascript:;">prev</a>
+                          <span aria-current="page" class="page-numbers current">1</span>
+                          <a class="page-numbers" href="javascript:;">2</a>
+                          <a class="page-numbers" href="javascript:;">3</a>
+                          <a class="page-numbers" href="javascript:;">4</a>
+                          <a class="page-numbers" href="javascript:;">5</a>
+                          <a class="page-numbers" href="javascript:;">6</a>
+                          <a class="page-numbers" href="javascript:;">7</a>
+                          <a class="page-numbers" href="javascript:;">8</a>
+                          <a class="page-numbers" href="javascript:;">9</a>
+                          <a class="page-numbers" href="javascript:;">10</a>
+                          <a class="next page-numbers" href="javascript:;">next</a>
+                        </div>
+                      </div>
+                      <div class="table__show-rows-wrapper">
+                          <a class="table__show-rows">Show 25</a>
+                          <a class="table__show-rows">Show 50</a>
+                          <a class="table__show-rows">Show 100</a>
+                        </div></div>
+                </td>
                 </tr>
-            </table>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <td>cell1_1</td><td>cell2_1</td><td>cell3_1</td><td>cell4_1</td><td>cell5_1</td><td>cell6_1</td><td>cell7_1</td><td>cell8_1</td><td>cell9_1</td><td>cell10_1</td><td>cell11_1</td><td>cell12_1</td><td><button class="table__edit-button" onclick="showModal()"><i class="fas fa-edit"></i>Edit</button></td></tr>
+                <tr>
+                <td>cell1_2</td><td>cell2_2</td><td>cell3_2</td><td>cell4_2</td><td>cell5_2</td><td>cell6_2</td><td>cell7_2</td><td>cell8_2</td><td>cell9_2</td><td>cell10_2</td><td>cell11_2</td><td>cell12_2</td></tr>
+                <tr>
+                <td>cell1_3</td><td>cell2_3</td><td>cell3_3</td><td>cell4_3</td><td>cell5_3</td><td>cell6_3</td><td>cell7_3</td><td>cell8_3</td><td>cell9_3</td><td>cell10_3</td><td>cell11_3</td><td>cell12_3</td></tr>
+                <tr>
+                <td>cell1_4</td><td>cell2_4</td><td>cell3_4</td><td>cell4_4</td><td>cell5_4</td><td>cell6_4</td><td>cell7_4</td><td>cell8_4</td><td>cell9_4</td><td>cell10_4</td><td>cell11_4</td><td>cell12_4</td></tr>
+                <tr>
+                <td>cell1_5</td><td>cell2_5</td><td>cell3_5</td><td>cell4_5</td><td>cell5_5</td><td>cell6_5</td><td>cell7_5</td><td>cell8_5</td><td>cell9_5</td><td>cell10_5</td><td>cell11_5</td><td>cell12_5</td></tr>
+                <tr>
+                <td>cell1_6</td><td>cell2_6</td><td>cell3_6</td><td>cell4_6</td><td>cell5_6</td><td>cell6_6</td><td>cell7_6</td><td>cell8_6</td><td>cell9_6</td><td>cell10_6</td><td>cell11_6</td><td>cell12_6</td></tr>
+                <tr>
+                <td>cell1_7</td><td>cell2_7</td><td>cell3_7</td><td>cell4_7</td><td>cell5_7</td><td>cell6_7</td><td>cell7_7</td><td>cell8_7</td><td>cell9_7</td><td>cell10_7</td><td>cell11_7</td><td>cell12_7</td></tr>
+                <tr>
+                <td>cell1_8</td><td>cell2_8</td><td>cell3_8</td><td>cell4_8</td><td>cell5_8</td><td>cell6_8</td><td>cell7_8</td><td>cell8_8</td><td>cell9_8</td><td>cell10_8</td><td>cell11_8</td><td>cell12_8</td></tr>
+                <tr>
+                <td>cell1_9</td><td>cell2_9</td><td>cell3_9</td><td>cell4_9</td><td>cell5_9</td><td>cell6_9</td><td>cell7_9</td><td>cell8_9</td><td>cell9_9</td><td>cell10_9</td><td>cell11_9</td><td>cell12_9</td></tr>
+                <tr>
+                <td>cell1_10</td><td>cell2_10</td><td>cell3_10</td><td>cell4_10</td><td>cell5_10</td><td>cell6_10</td><td>cell7_10</td><td>cell8_10</td><td>cell9_10</td><td>cell10_10</td><td>cell11_10</td><td>cell12_10</td></tr>
+                <tr>
+                <td>cell1_11</td><td>cell2_11</td><td>cell3_11</td><td>cell4_11</td><td>cell5_11</td><td>cell6_11</td><td>cell7_11</td><td>cell8_11</td><td>cell9_11</td><td>cell10_11</td><td>cell11_11</td><td>cell12_11</td></tr>
+                <tr>
+                <td>cell1_12</td><td>cell2_12</td><td>cell3_12</td><td>cell4_12</td><td>cell5_12</td><td>cell6_12</td><td>cell7_12</td><td>cell8_12</td><td>cell9_12</td><td>cell10_12</td><td>cell11_12</td><td>cell12_12</td></tr>
+                </tbody>
+                </tr>
+                </table>
         </main>
+
+        <script src="./js/index.js">
+            
+        </script>
+
     </body>
 </html>

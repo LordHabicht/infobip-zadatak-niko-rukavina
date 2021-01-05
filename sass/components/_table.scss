@@ -71,7 +71,7 @@ table.table--blue tfoot a.table__show-rows {
     cursor: pointer;
 
     &:hover {
-        color: $blue-aquamarin;
+        text-decoration: none;
     }
 }
 
@@ -120,6 +120,11 @@ table.table--blue tfoot a.table__show-rows {
     color:$blue-dark;
     width: 100%;
     min-width: 50px;
+    
+    &:focus {
+        outline: none;
+        border: 1px solid $blue-light-2;
+    }
 }
 
 

@@ -89,7 +89,7 @@ table.table--blue tfoot a.table__show-rows {
   text-decoration: underline;
   cursor: pointer; }
   table.table--blue tfoot a.table__show-rows:hover {
-    color: blue; }
+    text-decoration: none; }
 
 .table__show-rows-wrapper {
   margin: 0 auto 1rem auto;
@@ -122,6 +122,9 @@ table.table--blue tfoot a.table__show-rows {
   color: #1C6EA4;
   width: 100%;
   min-width: 50px; }
+  .table__select:focus {
+    outline: none;
+    border: 1px solid #2598e4; }
 
 .table__filter-input-text {
   max-width: 100%;
@@ -267,7 +270,7 @@ a {
   border: 0;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #000000;
   padding: 1.25rem 0 .5rem 0;
   background: transparent;
@@ -284,7 +287,7 @@ a {
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 1rem;
+  font-size: .8rem;
   color: #666666; }
 
 .form__field:focus {
@@ -298,7 +301,7 @@ a {
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #1C6EA4;
     font-weight: 700; }
 
@@ -313,5 +316,7 @@ a {
   width: 50%;
   height: 2rem;
   margin-top: 1rem;
-  font-size: 1.2rem;
-  padding: 0.3rem; }
+  font-size: 1rem; }
+  .form__select:focus {
+    outline: none;
+    border: 2px solid #1C6EA4; }

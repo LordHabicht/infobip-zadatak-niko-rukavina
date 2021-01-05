@@ -83,7 +83,7 @@
   border: 0;
   border-bottom: 2px solid $gray-dark-3;
   outline: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: $black;
   padding: 1.25rem 0 .5rem 0;
   background: transparent;
@@ -105,7 +105,7 @@
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 1rem;
+  font-size: .8rem;
   color: $gray-dark-2;
 }
 
@@ -115,7 +115,7 @@
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: 1rem;
+    font-size: .9rem;
     color: $blue-dark;
     font-weight:700;    
   }
@@ -138,6 +138,10 @@
     width:50%;
     height: 2rem;
     margin-top: 1rem;
-    font-size: 1.2rem;
-    padding: 0.3rem;
+    font-size: 1rem;
+
+    &:focus {
+        outline: none;
+        border: 2px solid $blue-dark;
+    }
 }

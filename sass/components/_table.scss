@@ -69,10 +69,14 @@ table.table--blue tfoot a.table__show-rows {
     background: transparent;
     text-decoration: underline;
     cursor: pointer;
+
+    &:hover {
+        color: $blue-aquamarin;
+    }
 }
 
 .table__show-rows-wrapper {
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     text-align: center;
 
     a.table__show-rows {

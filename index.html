@@ -22,6 +22,106 @@
             
         </div>
         <div id="modal">
+           
+            <div class="modal__form-wrapper">
+                <h2>Edit Item Details</h2>
+                <h3>Primary Details</h3>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' value="Infobip USA" required />
+                    <label for="name" class="form__label">Company Name</label>
+                </div>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Customer" name="customer" id='customer' value="Customer 1" required />
+                    <label for="customer" class="form__label">Customer</label>
+                </div>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Fiscal Year" name="fiscal-year" id='fiscal-year' value="2020" required />
+                    <label for="fiscal-year" class="form__label">Fiscal Year</label>
+                </div>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Document Number" name="doc-numner" id='doc-number' value="ghjk456zu" required />
+                    <label for="doc-numner" class="form__label">Document Number</label>
+                </div>
+                <div class="form__group field">
+                    <select class="form__select">
+                        <option>Proforma Invoice</option>
+                        <option>Invoice</option>
+                    </select>
+                    <label for="name" class="form__label">Due In</label>
+                </div>
+                <h3>Secondary Details</h3>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Document Status" name="doc-status" id='doc-status' value="approved" required />
+                    <label for="doc-status" class="form__label">Document Status</label>
+                </div>
+                <div class="form__group field">
+                    <select class="form__select">
+                        <option>Barclays</option>
+                        <option>Hypo</option>
+                        <option>Raiffeisen</option>
+                        <option>Bank of America</option>
+                        <option>BW Bank</option>
+                        <option>Consors</option>
+                        <option>Credit Plus Bank</option>
+                        <option>Commerzbank</option>
+                        <option>Dresdner Bank</option>
+                        <option>Santander</option>
+                    </select>
+                <label for="name" class="form__label">Bank Name</label>
+            </div>
+                <div class="form__group field">
+                    <input type="date" class="form__field form__field--half" placeholder="Document Period" name="doc-period" id='doc-period' value="2020-09-29" required />
+                    <input type="date" class="form__field form__field--half" placeholder="Document Period" name="doc-period" id='doc-period' value="2020-09-29" required />
+                    <label for="doc-period" class="form__label">Document Period (from to)</label>
+                </div>
+                <div class="form__group field">
+                    <input type="number" class="form__field" placeholder="Amount" name="amount" id='amount' value="2.500" required />
+                    <label for="amount" class="form__label">Amount</label>
+                </div>
+                <div class="form__group field">
+                        <select class="form__select">
+                            <option>HRK</option>
+                            <option>EUR</option>
+                            <option>GBP</option>
+                            <option>USD</option>
+                            <option>AOA</option>
+                            <option>XCD</option>
+                            <option>JPY</option>
+                            <option>CAD</option>
+                            <option>CHF</option>
+                            <option>CNH</option>
+                        </select>
+                    <label for="name" class="form__label">Currency</label>
+                </div>
+                <div class="form__group field">
+                    <select class="form__select">
+                        <option>today</option>
+                        <option>15-30</option>
+                        <option>30-60</option>
+                        <option>60-90</option>
+                        <option>90-120</option>
+                        <option>over 120</option>
+                    </select>
+                    <label for="name" class="form__label">Due In</label>
+                </div>
+                <div class="form__group field">
+                    <select class="form__select">
+                        <option>SMS</option>
+                        <option>Voice</option>
+                        <option>Viber</option>
+                        <option>Whattsapp</option>
+                        <option>Other</option>
+                    </select>
+                    <label for="name" class="form__label">Service</label>
+                </div>
+                <div class="form__group field">
+                    <select class="form__select">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                    <label for="name" class="form__label">is paid</label>
+                </div>
+            </div>
             <div class="modal__button-bar">
                 <button class="modal__btn modal__save-btn" onclick="hideModal()"><i class="fa fa-floppy-o fa-lg modal__btn-icon" aria-hidden="true"></i>Save</button>
                 <button class="modal__btn modal__cancel-btn" onclick="hideModal()"><i class="fa fa-times fa-lg modal__btn-icon modal__btn-icon-cancel" aria-hidden="true"></i>Cancel</button>

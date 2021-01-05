@@ -11,18 +11,20 @@
 
 #modal {
     position: absolute;
-    background-color: white;
-    left:10%;
-    top:25%;
-    width: 80%;
-    height:50%;
+    background-color: $white;
+    left: 22%;
+    top: 25%;
+    width: 54%;
+    height:30rem;
     display: none;
+    padding: 2rem;
+    border-radius: 6px;
 }
 
 .modal__button-bar {
     position: absolute;
     bottom: 23px;
-    right: 28px;
+    right: 33px;
 }
 
 .modal__btn {
@@ -38,6 +40,7 @@
     color: $white;
     border: $blue-dark;
     margin-right: 10px;
+    padding: 9px 23px 9px 13px;
 
     &:hover {
         background-color: $blue-light;
@@ -55,9 +58,90 @@
 }
 
 .modal__btn-icon {
-    margin-right: .4rem;
+    margin-right: .7rem;
 }
 
 .modal__btn-icon-cancel {
-    opacity: .75;
+    opacity: .9;
+}
+
+.modal__form-wrapper {
+    height: 28rem;
+    overflow-y: scroll;
+}
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$gray: #9b9b9b;
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 15px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray-dark-3;
+  outline: 0;
+  font-size: 1.2rem;
+  color: $black;
+  padding: 20px 0 8px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $blue-dark;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $blue-dark, $blue-light);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+.form__field--half {
+    width: 100%;
+}
+
+.form__select {
+    width:50%;
+    height: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 0.3rem;
 }

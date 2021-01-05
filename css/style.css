@@ -21,6 +21,14 @@ body {
 h1 {
   margin-bottom: 1rem; }
 
+h2 {
+  margin-bottom: 0;
+  margin-top: 1rem; }
+
+h3 {
+  margin-bottom: 1rem;
+  margin-top: 2rem; }
+
 table.table--blue {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
@@ -187,17 +195,19 @@ a {
 
 #modal {
   position: absolute;
-  background-color: white;
-  left: 10%;
+  background-color: #ffffff;
+  left: 22%;
   top: 25%;
-  width: 80%;
-  height: 50%;
-  display: none; }
+  width: 54%;
+  height: 30rem;
+  display: none;
+  padding: 2rem;
+  border-radius: 6px; }
 
 .modal__button-bar {
   position: absolute;
   bottom: 23px;
-  right: 28px; }
+  right: 33px; }
 
 .modal__btn {
   padding: 8px 16px 8px 8px;
@@ -209,19 +219,85 @@ a {
   background-color: #1C6EA4;
   color: #ffffff;
   border: #1C6EA4;
-  margin-right: 10px; }
+  margin-right: 10px;
+  padding: 9px 23px 9px 13px; }
   .modal__save-btn:hover {
     background-color: #91AEC6;
     cursor: pointer; }
 
 .modal__cancel-btn {
-  color: #888888; }
+  color: #666666; }
   .modal__cancel-btn:hover {
     background-color: #ffffff;
     cursor: pointer; }
 
 .modal__btn-icon {
-  margin-right: .4rem; }
+  margin-right: .7rem; }
 
 .modal__btn-icon-cancel {
-  opacity: .75; }
+  opacity: .9; }
+
+.modal__form-wrapper {
+  height: 28rem;
+  overflow-y: scroll; }
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 15px;
+  width: 50%; }
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.2rem;
+  color: #000000;
+  padding: 20px 0 8px 0;
+  background: transparent;
+  transition: border-color 0.2s; }
+  .form__field::placeholder {
+    color: transparent; }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1rem;
+    cursor: text;
+    top: 20px; }
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b; }
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #1C6EA4, #91AEC6);
+  border-image-slice: 1; }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #1C6EA4;
+    font-weight: 700; }
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none; }
+
+.form__field--half {
+  width: 100%; }
+
+.form__select {
+  width: 50%;
+  height: 2rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0.3rem; }

@@ -13,8 +13,7 @@ table.table--blue th {
 }
 
 table.table--blue tbody td {
-    font-size: 13px;
-
+    font-size: 0.8rem;
 }
 
 table.table--blue tbody tr:hover {
@@ -31,10 +30,11 @@ table.table--blue thead {
 }
 
 table.table--blue thead th {
-    font-size: 15px;
+    font-size: .85rem;
     font-weight: bold;
     color: $white;
     border-left: 2px solid $gray-blue-1;
+    padding-bottom: 0.65rem;
 }
 
 table.table--blue thead th:first-child {
@@ -42,13 +42,13 @@ table.table--blue thead th:first-child {
 }
 
 table.table--blue tfoot {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: normal;
     color: $white;
 }
 
 table.table--blue tfoot td {
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 table.table--blue tfoot .links {
@@ -87,6 +87,7 @@ table.table--blue tfoot a.table__show-rows {
 
 .table__filter-input {
     width: 90%;
+    height: 20px;
 }
 
 .table__edit-button {
@@ -113,4 +114,8 @@ table.table--blue tfoot a.table__show-rows {
 
 .table__edit-cell {
     width: 60px;
+}
+
+.table__select {
+    color:$blue-dark;
 }

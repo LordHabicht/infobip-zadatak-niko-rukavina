@@ -3,6 +3,10 @@ function showModal() {
     backdrop.style.display = "block";
     var modal =  document.getElementById("modal");
     modal.style.display = "block";
+
+    var wrapper = document.getElementById("modal__form-wrapper");
+    wrapper.scrollTop = 0;
+
 }
 
 function hideModal() {

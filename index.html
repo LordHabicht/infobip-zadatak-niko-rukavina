@@ -23,7 +23,7 @@
         </div>
         <div id="modal">
            
-            <div class="modal__form-wrapper">
+            <div class="modal__form-wrapper" id="modal__form-wrapper">
                 <h2>Edit Item Details</h2>
                 <h3>Primary Details</h3>
                 <div class="form__group field">
@@ -47,7 +47,7 @@
                         <option>Proforma Invoice</option>
                         <option>Invoice</option>
                     </select>
-                    <label for="name" class="form__label">Due In</label>
+                    <label for="name" class="form__label">Document Type</label>
                 </div>
                 <h3>Secondary Details</h3>
                 <div class="form__group field">
@@ -128,7 +128,7 @@
             </div>
         </div>
         <main>
-            <h1>Frontend assignment – Accounts Receivable</h1>
+            <h1>Accounts Receivable</h1>
             <table class="table--blue">
                 <thead>
                 <tr>
@@ -136,15 +136,74 @@
                 <th>Customer<input type="text" class="table__filter-input"></th>
                 <th>Fiscal Year<input type="text" class="table__filter-input"></th>
                 <th>Doc. Number<input type="text" class="table__filter-input"></th>
-                <th>Doc. Type<input type="text" class="table__filter-input"></th>
+                <th>Doc. Type<br>
+                    <select class="table__select">
+                        <option>all</option>
+                        <option>Invoice</option>
+                        <option>Proforma Invoice</option>
+                    </select>
+                </th>
                 <th>Doc. Status<input type="text" class="table__filter-input"></th>
-                <th>Bank Name<input type="text" class="table__filter-input"></th>
-                <th>Doc. period<input type="text" class="table__filter-input"></th>
-                <th>Amount<input type="text" class="table__filter-input"></th>
-                <th>Currency<input type="text" class="table__filter-input"></th>
-                <th>Due in<input type="text" class="table__filter-input"></th>
-                <th>Service<input type="text" class="table__filter-input"></th>
-                <th>is paid<input type="text" class="table__filter-input"></th>
+                <th>Bank Name<br>
+                    <select class="table__select">
+                        <option>all</option>
+                        <option>Barclays</option>
+                        <option>Hypo</option>
+                        <option>Raiffeisen</option>
+                        <option>Bank of America</option>
+                        <option>BW Bank</option>
+                        <option>Consors</option>
+                        <option>Credit Plus Bank</option>
+                        <option>Commerzbank</option>
+                        <option>Dresdner Bank</option>
+                        <option>Santander</option>
+                    </select>
+                </th>
+                <th>Doc. period<input type="date" class="table__filter-input"></th>
+                <th>Amount<input type="number" class="table__filter-input"></th>
+                <th>Currency<br>
+                    <select class="table__select">
+                        <option>all</option>
+                        <option>HRK</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                        <option>USD</option>
+                        <option>AOA</option>
+                        <option>XCD</option>
+                        <option>JPY</option>
+                        <option>CAD</option>
+                        <option>CHF</option>
+                        <option>CNH</option>
+                    </select>
+                </th>
+                <th>Due in<br>
+                    <select class="table__select">
+                        <option>all</option>
+                        <option>today</option>
+                        <option>15-30</option>
+                        <option>30-60</option>
+                        <option>60-90</option>
+                        <option>90-120</option>
+                        <option>over 120</option>
+                    </select>
+                </th>
+                <th>Service<br>
+                    <select class="table__select">
+                        <option>all</option>
+                        <option>SMS</option>
+                        <option>Voice</option>
+                        <option>Viber</option>
+                        <option>Whattsapp</option>
+                        <option>Other</option>
+                    </select>
+                </th>
+                <th>paid<br>
+                    <select class="table__select">
+                        <option>all</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </th>
                 <th></th>
                 </tr>
                 </thead>
@@ -174,29 +233,29 @@
                 </tfoot>
                 <tbody>
                 <tr>
-                    <td>Infobip USA</td><td>Customer </td><td>2020</td><td>123qwe456</td><td>Invoice</td><td>-</td><td>Raiffeisen</td><td>1.1.2020 - 1.1.2021</td><td>1.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                    <td>Infobip USA</td><td>Customer </td><td>2020</td><td>123qwe456</td><td>Invoice</td><td>approved</td><td>Raiffeisen</td><td>1.1.2020 - 1.1.2021</td><td>1.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Infobip HR</td><td>Customer 1</td><td>2020</td><td>4256gtz78</td><td>Invoice</td><td>-</td><td>Hypo</td><td>1.1.2020 - 1.1.2021</td><td>2.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Infobip HR</td><td>Customer 1</td><td>2020</td><td>4256gtz78</td><td>Invoice</td><td>approved</td><td>Hypo</td><td>1.1.2020 - 1.1.2021</td><td>2.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Infobip China</td><td>Customer 2</td><td>2020</td><td>758fgh235</td><td>Invoice</td><td>-</td><td>Barclays</td><td>1.1.2020 - 1.1.2021</td><td>3.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Infobip China</td><td>Customer 2</td><td>2020</td><td>758fgh235</td><td>Invoice</td><td>approved</td><td>Barclays</td><td>1.1.2020 - 1.1.2021</td><td>3.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 1</td><td>Customer 3</td><td>2020</td><td>987hfg364</td><td>Invoice</td><td>-</td><td>Bank 1</td><td>1.1.2020 - 1.1.2021</td><td>3.500</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 1</td><td>Customer 3</td><td>2020</td><td>987hfg364</td><td>Invoice</td><td>approved</td><td>Bank 1</td><td>1.1.2020 - 1.1.2021</td><td>3.500</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 2</td><td>Customer 4</td><td>2020</td><td>3284jho495</td><td>Invoice</td><td>-</td><td>Bank 2</td><td>1.1.2020 - 1.1.2021</td><td>2.500</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 2</td><td>Customer 4</td><td>2020</td><td>3284jho495</td><td>Invoice</td><td>approved</td><td>Bank 2</td><td>1.1.2020 - 1.1.2021</td><td>2.500</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 3</td><td>Customer 5</td><td>2020</td><td>890oiu765</td><td>Invoice</td><td>-</td><td>Bank 3</td><td>1.1.2020 - 1.1.2021</td><td>1.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 3</td><td>Customer 5</td><td>2020</td><td>890oiu765</td><td>Invoice</td><td>approved</td><td>Bank 3</td><td>1.1.2020 - 1.1.2021</td><td>1.000</td><td>EUR</td><td>today</td><td>SMS</td><td>yes</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 4</td><td>Customer 6</td><td>2019</td><td>548lkj234</td><td>Invoice</td><td>-</td><td>Bank 4</td><td>1.1.2020 - 1.1.2021</td><td>1.200</td><td>EUR</td><td>today</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 4</td><td>Customer 6</td><td>2019</td><td>548lkj234</td><td>Invoice</td><td>approved</td><td>Bank 4</td><td>1.1.2020 - 1.1.2021</td><td>1.200</td><td>EUR</td><td>today</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 5</td><td>Customer 7</td><td>2019</td><td>789hjk567</td><td>Invoice</td><td>-</td><td>Bank 5</td><td>1.1.2020 - 1.1.2021</td><td>3.300</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 5</td><td>Customer 7</td><td>2019</td><td>789hjk567</td><td>Invoice</td><td>approved</td><td>Bank 5</td><td>1.1.2020 - 1.1.2021</td><td>3.300</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 6</td><td>Customer 8</td><td>2019</td><td>kll444gnf</td><td>Invoice</td><td>-</td><td>Bank 6</td><td>1.1.2020 - 1.1.2021</td><td>4.500</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 6</td><td>Customer 8</td><td>2019</td><td>kll444gnf</td><td>Invoice</td><td>approved</td><td>Bank 6</td><td>1.1.2020 - 1.1.2021</td><td>4.500</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 7</td><td>Customer 9</td><td>2019</td><td>ghj456jhg</td><td>Invoice</td><td>-</td><td>Bank 7</td><td>1.1.2020 - 1.1.2021</td><td>2.000</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 7</td><td>Customer 9</td><td>2019</td><td>ghj456jhg</td><td>Invoice</td><td>approved</td><td>Bank 7</td><td>1.1.2020 - 1.1.2021</td><td>2.000</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 8</td><td>Customer 10</td><td>2019</td><td>123asd890</td><td>Invoice</td><td>-</td><td>Bank 8</td><td>1.1.2020 - 1.1.2021</td><td>1.000</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 8</td><td>Customer 10</td><td>2019</td><td>123asd890</td><td>Invoice</td><td>approved</td><td>Bank 8</td><td>1.1.2020 - 1.1.2021</td><td>1.000</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 <tr>
-                <td>Company 9</td><td>Customer 11</td><td>2018</td><td>765jhn444</td><td>Invoice</td><td>-</td><td>Bank 9</td><td>1.1.2020 - 1.1.2021</td><td>500</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
+                <td>Company 9</td><td>Customer 11</td><td>2018</td><td>765jhn444</td><td>Invoice</td><td>approved</td><td>Bank 9</td><td>1.1.2020 - 1.1.2021</td><td>500</td><td>EUR</td><td>15 – 30</td><td>WhatsApp</td><td>no</td><td class="table__edit-cell"><button class="table__edit-button" onclick="showModal()"><i class="fa fa-edit table__edit-icon"></i>Edit</button></td></tr>
                 </tbody>
                 </tr>
                 </table>

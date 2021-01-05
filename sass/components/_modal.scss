@@ -3,7 +3,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    min-height: 62.rem;
+    min-height: 62rem;
     opacity: .7;
     display: none;
 }
@@ -106,7 +106,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: $gray;
+  color: $gray-dark-2;
 }
 
 .form__field:focus {

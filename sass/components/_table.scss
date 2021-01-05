@@ -119,3 +119,12 @@ table.table--blue tfoot a.table__show-rows {
 .table__select {
     color:$blue-dark;
 }
+
+
+.table__filter-input-text {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    white-space: nowrap;
+}

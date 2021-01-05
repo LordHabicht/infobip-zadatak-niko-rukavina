@@ -9,7 +9,6 @@ function showModal() {
 
     var wrapper = document.getElementById("modal__form-wrapper");
     wrapper.scrollTop = 0;
-
 }
 
 /**

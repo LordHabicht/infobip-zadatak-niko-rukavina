@@ -108,6 +108,10 @@ table.table--blue tfoot a.table__show-rows {
   background-color: transparent; }
   .table__edit-button .table__edit-icon {
     margin-right: 0.25rem; }
+  .table__edit-button:focus {
+    outline: none;
+    background-color: #91AEC6;
+    color: #ffffff; }
   .table__edit-button:hover {
     border-radius: 3px;
     background-color: #91AEC6;
@@ -255,8 +259,9 @@ a {
   opacity: .9; }
 
 .modal__form-wrapper {
-  height: 27rem;
-  overflow-y: scroll; }
+  height: 26rem;
+  overflow-y: scroll;
+  padding-bottom: 2rem; }
 
 .form__group {
   position: relative;
